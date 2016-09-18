@@ -1,0 +1,25 @@
+# This script installs media related programs.
+
+# Controllers
+pavucontrol
+
+# Video
+vlc
+mpv
+youtube-dl
+
+# Music
+mpd mpc ncmpcpp mpdscribble
+picard
+ubuntu-restricted-extras
+
+# Images
+feh
+scrot
+imagemagick
+byzanz
+simplescreenrecorder
+
+# Bored stuff
+cmatrix
+cowsay fortune-mod toilet toilet-fonts sl

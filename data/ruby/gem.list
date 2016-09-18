@@ -1,0 +1,9 @@
+# This script installs IDEs, compilers, linters, IRC etc.
+
+scss_lint
+mdl
+ruby-lint
+rubocop
+jekyll
+lolcat
+tmuxinator

@@ -1,0 +1,34 @@
+# This script installs utility programs.
+
+# Terminal Emulators and Terminal Environment
+tmux
+rxvt-unicode
+w3m-img
+
+# CLI Tools
+tree
+hh
+xsel xclip
+at
+ranger
+
+# Filesystem Tools
+gparted
+grub-customizer
+efibootmgr
+
+# Hardware Interfaces
+xbacklight
+xdotool
+xautolock
+arandr
+redshift-gtk
+gnome-power-manager
+lm-sensors
+pm-utils
+
+# System Monitoring
+htop
+iotop
+iftop
+progress

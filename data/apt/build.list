@@ -1,0 +1,56 @@
+#!/usr/bin/env sh
+# This script installs software that has to be built from source. It tries to install packages to the stow directory (see GNU Stow).
+
+# Cava
+git clone https://github.com/karlstav/cava ${LOCAL_SRC}/cava
+cd ${LOCAL_SRC}/cava
+git checkout master
+git pull
+${INSTALL} libfftw3-dev libasound2-dev libncursesw5-dev libpulse-dev
+cd ${LOCAL_SRC}/cava
+sudo rm -rf ${STOW_DIR}/cava
+./autogen.sh
+./configure --prefix=${STOW_DIR}/cava
+make
+sudo make install
+cd ${STOW_DIR} && sudo stow cava
+cd
+
+# i3-Gaps
+git clone https://github.com/Airblader/i3 ${LOCAL_SRC}/i3-gaps
+cd ${LOCAL_SRC}/i3-gaps
+git checkout gaps
+git pull
+${INSTALL} libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev
+sudo rm -rf ${STOW_DIR}/i3-gaps
+sudo PREFIX=${STOW_DIR}/i3-gaps make
+sudo PREFIX=${STOW_DIR}/i3-gaps make install
+cd ${STOW_DIR} && sudo stow i3-gaps
+cd
+
+# i3Lock Clock Mod
+git clone https://github.com/cac03/i3lock ${LOCAL_SRC}/i3lock-mod
+cd ${LOCAL_SRC}/i3lock-mod
+git checkout master
+git pull
+sudo rm -rf ${STOW_DIR}/i3lock-mod
+sudo PREFIX=${STOW_DIR}/i3lock-mod make
+sudo mkdir -p ${STOW_DIR}/i3lock-mod/bin
+sudo cp i3lock ${STOW_DIR}/i3lock-mod/bin/i3lock-mod
+cd ${STOW_DIR} && sudo stow i3lock-mod
+cd
+
+# # Facebook Path Picker
+# git clone https://github.com/facebook/PathPicker ${BASE}/fpp
+# cd ${BASE}/fpp
+# chmod +x fpp
+# sudo ln -s "$(pwd)/fpp" ${LOCAL_BIN}/fpp
+# cd
+
+# # FASD
+# git clone https://github.com/clvv/fasd ${BASE}/fasd
+# cd ${BASE}/fasd
+# sudo PREFIX=${STOW_DIR}/fasd make
+# sudo PREFIX=${STOW_DIR}/fasd make install
+# cd ${STOW_DIR} && sudo stow fasd
+# cd

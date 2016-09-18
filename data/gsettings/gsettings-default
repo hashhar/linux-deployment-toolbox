@@ -1,0 +1,131 @@
+org.gnome.shell.overrides dynamic-workspaces true
+org.gnome.shell.overrides focus-change-on-pointer-rest true
+org.gnome.shell.overrides workspaces-only-on-primary true
+org.gnome.shell.overrides attach-modal-dialogs true
+org.gnome.shell.overrides edge-tiling true
+org.gnome.login-screen fallback-logo ''
+org.gnome.login-screen disable-user-list false
+org.gnome.login-screen allowed-failures 3
+org.gnome.login-screen enable-smartcard-authentication true
+org.gnome.login-screen banner-message-enable false
+org.gnome.login-screen enable-password-authentication true
+org.gnome.login-screen disable-restart-buttons false
+org.gnome.login-screen logo '/usr/share/plymouth/ubuntu-gnome_logo.png'
+org.gnome.login-screen enable-fingerprint-authentication true
+org.gnome.login-screen banner-message-text ''
+org.gnome.desktop.media-handling automount-open true
+org.gnome.desktop.media-handling automount true
+org.gnome.desktop.media-handling autorun-x-content-start-app ['x-content/unix-software']
+org.gnome.desktop.media-handling autorun-never true
+org.gnome.desktop.media-handling autorun-x-content-ignore @as []
+org.gnome.desktop.media-handling autorun-x-content-open-folder @as []
+org.gnome.Terminal.ProfilesList list ['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '48004871-bf82-455e-8d3d-bea85ad0ae58', 'ac1ea323-c5e8-4876-b019-2ac18e8e0b6d', '96983d84-21c0-44af-8b77-6b34d14b891d', '3ac25881-0df3-47af-a2d6-8fdb21f28226']
+org.gnome.Terminal.ProfilesList default '48004871-bf82-455e-8d3d-bea85ad0ae58'
+org.gnome.shell.app-switcher current-workspace-only false
+org.gnome.desktop.wm.preferences disable-workarounds false
+org.gnome.desktop.wm.preferences focus-new-windows 'smart'
+org.gnome.desktop.wm.preferences action-right-click-titlebar 'menu'
+org.gnome.desktop.wm.preferences mouse-button-modifier '<Alt>'
+org.gnome.desktop.wm.preferences action-middle-click-titlebar 'minimize'
+org.gnome.desktop.wm.preferences titlebar-uses-system-font true
+org.gnome.desktop.wm.preferences theme 'Adwaita'
+org.gnome.desktop.wm.preferences num-workspaces 6
+org.gnome.desktop.wm.preferences raise-on-click true
+org.gnome.desktop.wm.preferences auto-raise true
+org.gnome.desktop.wm.preferences visual-bell false
+org.gnome.desktop.wm.preferences focus-mode 'click'
+org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
+org.gnome.desktop.wm.preferences auto-raise-delay 500
+org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
+org.gnome.desktop.wm.preferences workspace-names @as []
+org.gnome.desktop.wm.preferences audible-bell true
+org.gnome.desktop.wm.preferences resize-with-right-button false
+org.gnome.desktop.wm.preferences titlebar-font 'Cantarell Bold 11'
+org.gnome.desktop.wm.preferences visual-bell-type 'fullscreen-flash'
+org.gnome.shell enabled-extensions ['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowoverlay-icons@sustmidown.centrum.cz', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'turnoffdisplay@simonthechipmunk.noreply.com', 'TopIcons@phocean.net', 'suspend-button@laserb', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'refresh-wifi@kgshank.net', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'messagingmenu@screenfreeze.net', 'lockkeys@vaina.lt', 'focus-my-window@varianto25.com', 'display-switcher@lucas.diedrich.gmail.com', 'disconnect-wifi@kgshank.net', 'dash-to-dock@micxgx.gmail.com', 'battery_status@milliburn.github.com', 'battery-power-statistics-shortcut@l300lvl.co.nr', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'alternate-tab@gnome-shell-extensions.gcampax.github.com', 'activities-config@nls1729', 'mediaplayer@patapon.info']
+org.gnome.shell command-history ['r', 'pkill clementine', 'scrot', 'r', 'pkill clementine', 'lg', 'r', 'pkill clementine', 'r', 'lg', 'r', 'lg', 'r', 'lg', 'r', '', 'r', 'pkill clementine', 'sudo baobab', 'pkill clementine', 'mpv --no-border', 'r']
+org.gnome.shell favorite-apps ['firefox.desktop', 'org.gnome.Nautilus.desktop', 'gnome-terminal.desktop', 'vlc.desktop', 'gvim.desktop', 'hexchat.desktop', 'org.gnome.Screenshot.desktop', 'transmission-gtk.desktop', 'ubuntu-software-center.desktop', 'update-manager.desktop']
+org.gnome.Terminal.Legacy.Settings new-terminal-mode 'window'
+org.gnome.Terminal.Legacy.Settings menu-accelerator-enabled true
+org.gnome.Terminal.Legacy.Settings tab-position 'top'
+org.gnome.Terminal.Legacy.Settings confirm-close true
+org.gnome.Terminal.Legacy.Settings shell-integration-enabled true
+org.gnome.Terminal.Legacy.Settings default-show-menubar false
+org.gnome.Terminal.Legacy.Settings mnemonics-enabled false
+org.gnome.Terminal.Legacy.Settings schema-version uint32 3
+org.gnome.Terminal.Legacy.Settings encodings ['UTF-8']
+org.gnome.Terminal.Legacy.Settings shortcuts-enabled true
+org.gnome.Terminal.Legacy.Settings tab-policy 'automatic'
+org.gnome.nautilus.preferences confirm-trash true
+org.gnome.nautilus.preferences install-mime-activation true
+org.gnome.nautilus.preferences always-use-location-entry false
+org.gnome.nautilus.preferences default-sort-in-reverse-order false
+org.gnome.nautilus.preferences executable-text-activation 'display'
+org.gnome.nautilus.preferences mouse-forward-button 9
+org.gnome.nautilus.preferences enable-interactive-search true
+org.gnome.nautilus.preferences click-policy 'double'
+org.gnome.nautilus.preferences enable-delete false
+org.gnome.nautilus.preferences default-sort-order 'name'
+org.gnome.nautilus.preferences default-folder-viewer 'icon-view'
+org.gnome.nautilus.preferences sort-directories-first true
+org.gnome.nautilus.preferences show-directory-item-counts 'local-only'
+org.gnome.nautilus.preferences tabs-open-position 'after-current-tab'
+org.gnome.nautilus.preferences show-hidden-files false
+org.gnome.nautilus.preferences show-image-thumbnails 'local-only'
+org.gnome.nautilus.preferences thumbnail-limit uint64 209715200
+org.gnome.nautilus.preferences mouse-back-button 8
+org.gnome.nautilus.preferences bulk-rename-tool @ay []
+org.gnome.nautilus.preferences mouse-use-extra-buttons true
+org.gnome.nautilus.window-state sidebar-width 188
+org.gnome.nautilus.window-state start-with-sidebar true
+org.gnome.nautilus.window-state geometry '1338x723+14+14'
+org.gnome.nautilus.window-state maximized true
+org.gnome.nautilus.window-state start-with-location-bar true
+org.gnome.nautilus.icon-view captions ['none', 'size', 'type']
+org.gnome.nautilus.icon-view thumbnail-size 64
+org.gnome.nautilus.icon-view default-zoom-level 'standard'
+org.gnome.nautilus.icon-view text-ellipsis-limit ['3']
+org.gnome.nautilus.desktop trash-icon-name 'Trash'
+org.gnome.nautilus.desktop text-ellipsis-limit 3
+org.gnome.nautilus.desktop background-fade true
+org.gnome.nautilus.desktop home-icon-visible true
+org.gnome.nautilus.desktop trash-icon-visible true
+org.gnome.nautilus.desktop network-icon-visible false
+org.gnome.nautilus.desktop font ''
+org.gnome.nautilus.desktop network-icon-name 'Network Servers'
+org.gnome.nautilus.desktop home-icon-name 'Home'
+org.gnome.nautilus.desktop volumes-visible true
+org.gnome.nautilus.list-view default-visible-columns ['name', 'size', 'type', 'date_modified']
+org.gnome.nautilus.list-view default-zoom-level 'small'
+org.gnome.nautilus.list-view use-tree-view false
+org.gnome.nautilus.list-view default-column-order ['name', 'size', 'type', 'date_modified']
+org.gnome.nautilus.preferences confirm-trash true
+org.gnome.nautilus.preferences install-mime-activation true
+org.gnome.nautilus.preferences always-use-location-entry false
+org.gnome.nautilus.preferences default-sort-in-reverse-order false
+org.gnome.nautilus.preferences executable-text-activation 'display'
+org.gnome.nautilus.preferences mouse-forward-button 9
+org.gnome.nautilus.preferences enable-interactive-search true
+org.gnome.nautilus.preferences click-policy 'double'
+org.gnome.nautilus.preferences enable-delete false
+org.gnome.nautilus.preferences default-sort-order 'name'
+org.gnome.nautilus.preferences default-folder-viewer 'icon-view'
+org.gnome.nautilus.preferences sort-directories-first true
+org.gnome.nautilus.preferences show-directory-item-counts 'local-only'
+org.gnome.nautilus.preferences tabs-open-position 'after-current-tab'
+org.gnome.nautilus.preferences show-hidden-files false
+org.gnome.nautilus.preferences show-image-thumbnails 'local-only'
+org.gnome.nautilus.preferences thumbnail-limit uint64 209715200
+org.gnome.nautilus.preferences mouse-back-button 8
+org.gnome.nautilus.preferences bulk-rename-tool @ay []
+org.gnome.nautilus.preferences mouse-use-extra-buttons true
+org.gnome.nautilus.desktop trash-icon-name 'Trash'
+org.gnome.nautilus.desktop text-ellipsis-limit 3
+org.gnome.nautilus.desktop background-fade true
+org.gnome.nautilus.desktop home-icon-visible true
+org.gnome.nautilus.desktop trash-icon-visible true
+org.gnome.nautilus.desktop network-icon-visible false
+org.gnome.nautilus.desktop font ''
+org.gnome.nautilus.desktop network-icon-name 'Network Servers'
+org.gnome.nautilus.desktop home-icon-name 'Home'
+org.gnome.nautilus.desktop volumes-visible true

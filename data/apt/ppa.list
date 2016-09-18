@@ -1,0 +1,44 @@
+#!/usr/bin/env sh
+# This script adds required PPAs and adds entries to apt's sources.list.
+
+# Variables
+ADD_REPO="add-apt-repository -y"
+UPDATE="apt-get update"
+SOURCES_DIR="/etc/apt/sources.list.d"
+
+# PPAs
+# Golang
+${ADD_REPO} ppa:ubuntu-lxc/lxd-stable
+${ADD_REPO} ppa:dawidd0811/neofetch
+${ADD_REPO} ppa:danielrichter2007/grub-customizer
+
+# Hstr
+${ADD_REPO} ppa:ultradvorka/ppa
+
+# Numix and Paper
+${ADD_REPO} ppa:numix/ppa
+${ADD_REPO} ppa:snwh/pulp
+${ADD_REPO} ppa:webupd8team/java
+${ADD_REPO} ppa:neovim-ppa/unstable
+${ADD_REPO} ppa:maarten-baert/simplescreenrecorder
+${ADD_REPO} ppa:rodsmith/refind
+
+# Mozilla Nightly Builds
+${ADD_REPO} ppa:ubuntu-mozilla-daily/ppa
+
+echo "deb http://debian.sur5r.net/i3/ $(lsb_release -c -s) universe" > ${SOURCES_DIR}/i3.list
+${UPDATE}
+apt-get --allow-unauthenticated install sur5r-keyring
+
+wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_16.04/Release.key -O ${SOURCES_DIR}/arc-theme.key
+apt-key add - < ${SOURCES_DIR}/arc-theme.key
+echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' > ${SOURCES_DIR}/arc-theme.list
+
+apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+echo 'deb https://apt.dockerproject.org/repo ubuntu-xenial main' > ${SOURCES_DIR}/docker.list
+
+curl https://repo.skype.com/data/SKYPE-GPG-KEY | apt-key add - 
+${UPDATE}
+echo "deb [arch=amd64] https://repo.skype.com/deb stable main" > ${SOURCES_DIR}/skypeforlinux.list
+
+${UPDATE}

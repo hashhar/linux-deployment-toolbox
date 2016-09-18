@@ -1,0 +1,46 @@
+# This script installs IDEs, compilers, linters, IRC etc.
+
+# Essentials for other programs. These must be installed before we process any other list.
+git git-extras
+stow
+build-essential
+automake libtool libtool-bin
+
+# NEOVIM
+python-dev python-pip python3-dev python3-pip
+
+# Package Management
+apt-file
+synaptic
+deborphan
+ppa-purge
+checkinstall
+
+# IRC and Communication
+weechat weechat-plugins weechat-scripts
+
+# Languages
+cmake ninja-build
+ruby ruby-dev bundler rake
+golang
+oracle-java8-installer
+
+# Search
+silversearcher-ag ack-grep
+exuberant-ctags cscope
+
+# IDEs and Text Editors
+vim-gnome neovim
+emacs
+guake
+
+# Linters
+shellcheck
+pylint
+
+# Containers
+docker-engine
+
+# Browsers
+firefox firefox-locale-en
+firefox-trunk firefox-trunk-locale-en

@@ -1,0 +1,13 @@
+# This script installs IDEs, compilers, linters, IRC etc.
+
+typescript
+typescript-tools
+tslint
+typings
+diff-so-fancy
+hackmyresume
+resume-cli
+phantomjs-prebuilt
+jsonlint
+eslint
+csslint

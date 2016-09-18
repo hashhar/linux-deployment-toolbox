@@ -1,0 +1,1 @@
+# Packages that will be removed from the system. This step will be performed before any others to ensure that we don't break any package in the process.

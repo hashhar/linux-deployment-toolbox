@@ -1,0 +1,24 @@
+# This script installs WM and DE related packages.
+
+# Window Manager
+i3
+
+# Panel
+i3blocks
+
+# Launcher
+rofi
+
+# Compositor
+compton
+
+# Themes and Icons
+lxappearance gtk-chtheme qt4-qtconfig
+paper-cursor-theme paper-icon-theme
+arc-theme
+numix-gtk-theme
+numix-icon-theme
+numix-icon-theme-circle
+
+# Bootloader
+#refind

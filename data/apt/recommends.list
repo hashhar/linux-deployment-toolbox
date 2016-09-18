@@ -1,0 +1,5 @@
+# This list has the packages that will also install their recommended packages.
+
+# LaTeX
+texlive-full
+texstudio

@@ -1,0 +1,38 @@
+#!/usr/bin/env sh
+
+mkdir -p ${TMP_WGET}
+mkdir -p ${LOCAL_BIN}
+mkdir -p ${FONTS_DIR}
+
+# TMP_WGET
+wget http://download.opensuse.org/repositories/home:/jesseadams/xUbuntu_14.04/amd64/mdocml_1.12.3_amd64.deb -O ${TMP_WGET}/mdocml.deb
+
+wget https://go.microsoft.com/fwlink/?LinkID=760868 -O ${TMP_WGET}/visual-studio-code.deb
+
+wget https://github.com/acrisci/playerctl/releases/download/v0.5.0/playerctl-0.5.0_amd64.deb -O ${TMP_WGET}/playerctl.deb
+
+# LOCAL_BIN
+wget https://raw.githubusercontent.com/axper/man2archwiki/master/man2archwiki -O ${LOCAL_BIN}/archman
+
+wget https://raw.githubusercontent.com/slithery/bash-template/master/bash-template -O ${LOCAL_BIN}/bash-template
+
+wget https://raw.githubusercontent.com/philovivero/distribution/master/distribution -O ${LOCAL_BIN}/distribution
+
+wget https://raw.githubusercontent.com/holman/spark/master/spark -O ${LOCAL_BIN}/spark
+
+# FONTS_DIR
+wget https://github.com/FortAwesome/Font-Awesome/archive/v4.6.3.tar.gz -O ${FONTS_DIR}/font-awesome.tar.gz
+
+wget https://github.com/chrissimpkins/Hack/releases/download/v2.020/Hack-v2_020-ttf.tar.gz -O ${FONTS_DIR}/hack-ttf.tar.gz
+
+wget https://github.com/primer/octicons/archive/v4.2.0.tar.gz -O ${FONTS_DIR}/octicons.tar.gz
+
+wget https://1drv.ms/u/s!AjUnBpeJ8AWHid5TJfXB0nZq9tj3HQ -O ${FONTS_DIR}/powerline-symbols.ttf
+
+wget https://www.fontsquirrel.com/fonts/download/droid-sans-mono -O ${FONTS_DIR}/droid-sans-mono.zip
+
+wget https://github.com/mozilla/Fira/archive/master.zip -O ${FONTS_DIR}/fira.zip
+
+wget https://github.com/adobe-fonts/source-code-pro/archive/2.010R-ro/1.030R-it.tar.gz -O ${FONTS_DIR}/source-code-pro.tar.gz
+
+wget https://github.com/vorillaz/devicons/raw/master/fonts/devicons.ttf -O ${FONTS_DIR}/devicons.ttf
