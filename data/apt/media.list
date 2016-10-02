@@ -17,9 +17,8 @@ ubuntu-restricted-extras
 feh
 scrot
 imagemagick
-byzanz
 simplescreenrecorder
 
 # Bored stuff
 cmatrix
-cowsay fortune-mod toilet toilet-fonts sl
+cowsay fortune-mod fortunes fortunes-bofh-excuses fortunes-debian-hints fortunes-off fortunes-spam fortunes-ubuntu-server toilet toilet-fonts sl

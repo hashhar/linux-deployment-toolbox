@@ -7,6 +7,7 @@ cd ${LOCAL_SRC}/cava
 git checkout master
 git pull
 ${INSTALL} libfftw3-dev libasound2-dev libncursesw5-dev libpulse-dev
+export INSTALL=
 cd ${LOCAL_SRC}/cava
 sudo rm -rf ${STOW_DIR}/cava
 ./autogen.sh
@@ -14,6 +15,7 @@ sudo rm -rf ${STOW_DIR}/cava
 make
 sudo make install
 cd ${STOW_DIR} && sudo stow cava
+export INSTALL='sudo apt install -y'
 cd
 
 # i3-Gaps
@@ -33,6 +35,7 @@ git clone https://github.com/cac03/i3lock ${LOCAL_SRC}/i3lock-mod
 cd ${LOCAL_SRC}/i3lock-mod
 git checkout master
 git pull
+${INSTALL} libxcb-dpms0-dev libpam0g-dev libxkbfile-dev
 sudo rm -rf ${STOW_DIR}/i3lock-mod
 sudo PREFIX=${STOW_DIR}/i3lock-mod make
 sudo mkdir -p ${STOW_DIR}/i3lock-mod/bin

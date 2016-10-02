@@ -11,6 +11,7 @@ python-dev python-pip python3-dev python3-pip
 
 # Package Management
 apt-file
+apt-rdepends
 synaptic
 deborphan
 ppa-purge
@@ -44,3 +45,6 @@ docker-engine
 # Browsers
 firefox firefox-locale-en
 firefox-trunk firefox-trunk-locale-en
+
+# For TexLive setup
+perl-tk

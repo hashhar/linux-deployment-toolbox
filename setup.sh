@@ -3,20 +3,21 @@ export HOME="/home/ashhar"
 export LOCAL_SRC="${HOME}/.local/src"
 export LOCAL_BIN="${HOME}/.local/bin"
 export STOW_DIR="/usr/local/stow"
-export INSTALL="sudo apt-get install -y"
+export INSTALL="sudo apt install -y"
 export RESTORE="${HOME}/restore"
 export TMP_WGET="/tmp/wget"
 export FONTS_DIR="${HOME}/.fonts"
 
 TMP_RESTORE="/tmp/restore"
 
-UNINSTALL="sudo apt-get autoremove --purge -y"
+UNINSTALL="sudo apt autoremove --purge -y"
 DPKG_INSTALL="sudo dpkg -i"
 NPM_INSTALL="npm install -g"
 PIP2="sudo pip2 install"
 PIP3="sudo pip3 install"
 GEM="sudo gem install"
 GET_DOTFILES="git clone https://github.com/hashhar/dotfiles"
+ANACONDA_FILE="Anaconda3-4.2.0-Linux-x86_64.sh"
 
 mkdir -p ${LOCAL_SRC}
 mkdir -p ${LOCAL_BIN}
@@ -38,10 +39,9 @@ printf '%s\n' "Downloading and installing extra packages"
 printf '%s\n' "Y to continue, N to skip"
 read choice
 if [ "$choice" == "Y" ]; then
-	mkdir ${TMP_WGET} && cd ${TMP_WGET}
+    mkdir ${TMP_WGET} && cd ${TMP_WGET}
     ${RESTORE}/data/wget/urls.list
     ${DPKG_INSTALL} ${TMP_WGET}/*.deb
-    chmod 744 ${LOCAL_BIN}/*
     ${RESTORE}/data/wget/fonts.sh
     cd ${RESTORE}
 fi
@@ -157,8 +157,12 @@ printf '%s\n' "Y to continue, N to skip"
 read choice
 if [ "$choice" == "Y" ]; then
     cd ${HOME}/Downloads
-    wget http://repo.continuum.io/archive/Anaconda3-4.0.0-Linux-x86_64.sh
-    bash Anaconda3-4.0.0-Linux-x86_64.sh
+    if [ ! -f ${ANACONDA_FILE} ]; then
+        wget "http://repo.continuum.io/archive/${ANACONDA_FILE}"
+    else
+	printf '%s\n' "Anaconda setup already present, will not download again. Starting setup."
+    fi
+    bash ${ANACONDA_FILE}
     cd
 fi
 
@@ -168,5 +172,7 @@ ${GET_DOTFILES} dotfiles
 ./dotfiles/install.sh
 
 # Make all files in ${LOCAL_BIN} executable.
-chmod -R 744 ${LOCAL_BIN}/*
+chmod -R 755 ${LOCAL_BIN}/*
 
+# Setup grub
+${RESTORE}/data/grub/grub.sh

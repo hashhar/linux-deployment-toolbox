@@ -5,34 +5,44 @@ mkdir -p ${LOCAL_BIN}
 mkdir -p ${FONTS_DIR}
 
 # TMP_WGET
-wget http://download.opensuse.org/repositories/home:/jesseadams/xUbuntu_14.04/amd64/mdocml_1.12.3_amd64.deb -O ${TMP_WGET}/mdocml.deb
+curl -L --progress-bar -o ${TMP_WGET}/mdocml.deb http://download.opensuse.org/repositories/home:/jesseadams/xUbuntu_14.04/amd64/mdocml_1.12.3_amd64.deb
 
-wget https://go.microsoft.com/fwlink/?LinkID=760868 -O ${TMP_WGET}/visual-studio-code.deb
+curl -L --progress-bar -o ${TMP_WGET}/visual-studio-code.deb https://go.microsoft.com/fwlink/?LinkID=760868
 
-wget https://github.com/acrisci/playerctl/releases/download/v0.5.0/playerctl-0.5.0_amd64.deb -O ${TMP_WGET}/playerctl.deb
+curl -L --progress-bar -o ${TMP_WGET}/playerctl.deb https://github.com/acrisci/playerctl/releases/download/v0.5.0/playerctl-0.5.0_amd64.deb
 
 # LOCAL_BIN
-wget https://raw.githubusercontent.com/axper/man2archwiki/master/man2archwiki -O ${LOCAL_BIN}/archman
+curl -L --progress-bar -o ${LOCAL_BIN}/archman https://raw.githubusercontent.com/axper/man2archwiki/master/man2archwiki
 
-wget https://raw.githubusercontent.com/slithery/bash-template/master/bash-template -O ${LOCAL_BIN}/bash-template
+curl -L --progress-bar -o ${LOCAL_BIN}/bash-template https://raw.githubusercontent.com/slithery/bash-template/master/bash-template
 
-wget https://raw.githubusercontent.com/philovivero/distribution/master/distribution -O ${LOCAL_BIN}/distribution
+curl -L --progress-bar -o ${LOCAL_BIN}/distribution https://raw.githubusercontent.com/philovivero/distribution/master/distribution
 
-wget https://raw.githubusercontent.com/holman/spark/master/spark -O ${LOCAL_BIN}/spark
+curl -L --progress-bar -o ${LOCAL_BIN}/spark https://raw.githubusercontent.com/holman/spark/master/spark
 
 # FONTS_DIR
-wget https://github.com/FortAwesome/Font-Awesome/archive/v4.6.3.tar.gz -O ${FONTS_DIR}/font-awesome.tar.gz
+curl -L --progress-bar -o ${FONTS_DIR}/dina.zip http://www.donationcoder.com/Software/Jibz/Dina/downloads/Dina.zip
 
-wget https://github.com/chrissimpkins/Hack/releases/download/v2.020/Hack-v2_020-ttf.tar.gz -O ${FONTS_DIR}/hack-ttf.tar.gz
+curl -L --progress-bar -o ${FONTS_DIR}/droid-sans-mono.zip https://www.fontsquirrel.com/fonts/download/droid-sans-mono
 
-wget https://github.com/primer/octicons/archive/v4.2.0.tar.gz -O ${FONTS_DIR}/octicons.tar.gz
+curl -L --progress-bar -o ${FONTS_DIR}/devicons.ttf https://github.com/vorillaz/devicons/raw/master/fonts/devicons.ttf
 
-wget https://1drv.ms/u/s!AjUnBpeJ8AWHid5TJfXB0nZq9tj3HQ -O ${FONTS_DIR}/powerline-symbols.ttf
+curl -L --progress-bar -o ${FONTS_DIR}/fira.zip https://github.com/mozilla/Fira/archive/master.zip
+curl -L --progress-bar -o ${FONTS_DIR}/fira-code.zip https://github.com/tonsky/FiraCode/releases/download/1.203/FiraCode_1.203.zip
 
-wget https://www.fontsquirrel.com/fonts/download/droid-sans-mono -O ${FONTS_DIR}/droid-sans-mono.zip
+curl -L --progress-bar -o ${FONTS_DIR}/font-awesome.tar.gz https://github.com/FortAwesome/Font-Awesome/archive/v4.6.3.tar.gz
 
-wget https://github.com/mozilla/Fira/archive/master.zip -O ${FONTS_DIR}/fira.zip
+curl -L --progress-bar -o ${FONTS_DIR}/gohufont-pcf.tar.gz http://font.gohu.org/gohufont-2.1.tar.gz
 
-wget https://github.com/adobe-fonts/source-code-pro/archive/2.010R-ro/1.030R-it.tar.gz -O ${FONTS_DIR}/source-code-pro.tar.gz
+curl -L --progress-bar -o ${FONTS_DIR}/hack-ttf.tar.gz https://github.com/chrissimpkins/Hack/releases/download/v2.020/Hack-v2_020-ttf.tar.gz
 
-wget https://github.com/vorillaz/devicons/raw/master/fonts/devicons.ttf -O ${FONTS_DIR}/devicons.ttf
+curl -L --progress-bar -o ${FONTS_DIR}/iosevka.zip https://github.com/be5invis/Iosevka/releases/download/v1.9.4/01.iosevka-1.9.4.zip
+curl -L --progress-bar -o ${FONTS_DIR}/iosevka-term.zip https://github.com/be5invis/Iosevka/releases/download/v1.9.4/02.iosevka-term-1.9.4.zip
+
+curl -L --progress-bar -o ${FONTS_DIR}/octicons.tar.gz https://github.com/primer/octicons/archive/v4.2.0.tar.gz
+
+curl -L --progress-bar -o ${FONTS_DIR}/proggy-square.pcf.gz http://www.proggyfonts.net/wp-content/download/ProggySquareSZ.pcf.gz
+
+curl -L --progress-bar -o ${FONTS_DIR}/powerline-symbols.ttf https://github.com/hashhar/dotfiles/raw/master/fonts/.fonts/powerline-symbols.ttf
+
+curl -L --progress-bar -o ${FONTS_DIR}/source-code-pro.tar.gz https://github.com/adobe-fonts/source-code-pro/archive/2.010R-ro/1.030R-it.tar.gz

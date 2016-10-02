@@ -1,0 +1,12 @@
+--- /etc/default/grub	2016-09-19 04:14:39.369068950 +0530
++++ /media/ashhar/Media/xenon/etc/default/grub	2016-07-22 16:48:26.000000000 +0530
+@@ -30,5 +30,9 @@
+ # Uncomment to disable generation of recovery mode menu entries
+ #GRUB_DISABLE_RECOVERY="true"
+ 
+ # Uncomment to get a beep at grub start
+ #GRUB_INIT_TUNE="480 440 1"
++
++GRUB_BACKGROUND="/boot/boot.png"
++export color_highlight="light-gray/black"
++export color_normal="white/black"

@@ -39,6 +39,7 @@ echo 'deb https://apt.dockerproject.org/repo ubuntu-xenial main' > ${SOURCES_DIR
 
 curl https://repo.skype.com/data/SKYPE-GPG-KEY | apt-key add - 
 ${UPDATE}
-echo "deb [arch=amd64] https://repo.skype.com/deb stable main" > ${SOURCES_DIR}/skypeforlinux.list
+echo 'deb [arch=amd64] https://repo.skype.com/deb stable main' > ${SOURCES_DIR}/skypeforlinux.list
+rm ${SOURCES_DIR}/arc-theme.key
 
 ${UPDATE}

@@ -2,7 +2,7 @@
 
 # Terminal Emulators and Terminal Environment
 tmux
-rxvt-unicode
+rxvt-unicode-256color
 w3m-img
 
 # CLI Tools
@@ -11,6 +11,7 @@ hh
 xsel xclip
 at
 ranger
+pass
 
 # Filesystem Tools
 gparted
@@ -32,3 +33,7 @@ htop
 iotop
 iftop
 progress
+
+# Email
+thunderbird thunderbird-gnome-support
+mutt
