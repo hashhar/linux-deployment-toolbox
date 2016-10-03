@@ -15,7 +15,7 @@ sudo rm -rf ${STOW_DIR}/cava
 make
 sudo make install
 cd ${STOW_DIR} && sudo stow cava
-export INSTALL='sudo apt install -y'
+export INSTALL='sudo apt-get install -y'
 cd
 
 # i3-Gaps
@@ -41,6 +41,15 @@ sudo PREFIX=${STOW_DIR}/i3lock-mod make
 sudo mkdir -p ${STOW_DIR}/i3lock-mod/bin
 sudo cp i3lock ${STOW_DIR}/i3lock-mod/bin/i3lock-mod
 cd ${STOW_DIR} && sudo stow i3lock-mod
+cd
+
+# Neofetch
+git clone https://github.com/dylanaraps/neofetch ${LOCAL_SRC}/neofetch
+cd ${LOCAL_SRC}/neofetch
+git checkout master
+git pull
+sudo PREFIX=${STOW_DIR}/neofetch make install
+cd ${STOW_DIR} && sudo stow neofetch
 cd
 
 # # Facebook Path Picker
