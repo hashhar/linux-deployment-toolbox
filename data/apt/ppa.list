@@ -42,4 +42,7 @@ ${UPDATE}
 echo 'deb [arch=amd64] https://repo.skype.com/deb stable main' > ${SOURCES_DIR}/skypeforlinux.list
 rm ${SOURCES_DIR}/arc-theme.key
 
+echo 'deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ xenial main' > ${SOURCES_DIR}/dotnetdev.list
+apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893
+
 ${UPDATE}
