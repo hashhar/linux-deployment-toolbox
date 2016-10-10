@@ -11,6 +11,8 @@ curl -L -o ${TMP_WGET}/visual-studio-code.deb https://go.microsoft.com/fwlink/?L
 
 curl -L -o ${TMP_WGET}/playerctl.deb https://github.com/acrisci/playerctl/releases/download/v0.5.0/playerctl-0.5.0_amd64.deb
 
+curl -L -o ${TMP_WGET}/pandoc.deb https://github.com/jgm/pandoc/releases/download/1.17.2/pandoc-1.17.2-1-amd64.deb
+
 # LOCAL_BIN
 curl -L -o ${LOCAL_BIN}/archman https://raw.githubusercontent.com/axper/man2archwiki/master/man2archwiki
 

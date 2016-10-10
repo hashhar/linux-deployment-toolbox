@@ -52,6 +52,16 @@ sudo PREFIX=${STOW_DIR}/neofetch make install
 cd ${STOW_DIR} && sudo stow neofetch
 cd
 
+# MPDRIS2 Support for MPD
+git clone git://github.com/eonpatapon/mpDris2.git ${LOCAL_SRC}/mpdris2
+cd ${LOCAL_SRC}/mpdris2
+sudo pip3 install python-mpd2 mutagen
+./autogen.sh --sysconfdir=/etc --prefix=${STOW_DIR}/mpdris2
+sudo PREFIX=${STOW_DIR}/mpdris2 make install
+sudo sed -i -e '1 s|^.*$|#!/usr/bin/python3|g' ${STOW_DIR}/mpdris2/bin/mpDris2
+cd ${STOW_DIR} && sudo stow mpdris2
+cd
+
 # # Facebook Path Picker
 # git clone https://github.com/facebook/PathPicker ${BASE}/fpp
 # cd ${BASE}/fpp
