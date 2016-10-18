@@ -4,7 +4,7 @@
 git git-extras
 stow
 build-essential
-automake libtool libtool-bin
+automake libtool libtool-bin intltool
 
 # NEOVIM
 python-dev python-pip python3-dev python3-pip
@@ -48,3 +48,6 @@ firefox-trunk firefox-trunk-locale-en
 
 # For TexLive setup
 perl-tk
+
+# Documentation
+zeal
