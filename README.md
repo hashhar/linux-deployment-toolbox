@@ -13,11 +13,11 @@ A framework and policy built using `bash` (`sh` compatible) shell scripts that a
 - Installing dotfiles (provided that your dotfiles include an `install.sh` script)
 - Installing fonts
 - Purging and uninstalling packages already present
+- Configuring any arbitrary software using a custom shell script
 
 **Planned features:**
 
 - Importing the `dconf` settings
 - Importing GNOME Shell settings from `gsettings`
 - Configuring popular software according to simple rules
-- Configuring any arbitrary software using a custom shell script
 
