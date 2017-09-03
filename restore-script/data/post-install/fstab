@@ -1,0 +1,21 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda5 during installation
+UUID=46bcf40b-4731-4851-94f2-734adfc63c0d /                       ext4    errors=remount-ro                                                0 1
+# /boot/efi was on /dev/sda2 during installation
+UUID=3626-0A78                            /boot/efi               vfat    umask=0077                                                       0 0
+# swap was on /dev/sdb4 during installation
+UUID=008b9f57-4b84-4958-892d-4a6fff6e6e60 none                    swap    sw                                                               0 0
+
+# Below entries configured by Ashhar Hasan's postinstall script, be sure to check for errors
+UUID=0F57039A0F57039A                     /media/ashhar/Resources ntfs-3g uid=1000,gid=1000,dmask=022,fmask=033,errors=remount-ro,relatime 0 0
+UUID=0DEA0A9C0DEA0A9C                     /media/ashhar/Media     ntfs-3g uid=1000,gid=1000,dmask=022,fmask=033,errors=remount-ro,relatime 0 0
+UUID=2c6a58b3-9f03-4a9f-8cb1-10290f14087b /media/ashhar/Data      ext4    errors=remount-ro,relatime                                       0 2
+/media/ashhar/Media/Music                 /home/ashhar/Music      none    bind                                                             0 0
+/media/ashhar/Media/Pictures              /home/ashhar/Pictures   none    bind                                                             0 0
+/media/ashhar/Media/Videos                /home/ashhar/Videos     none    bind                                                             0 0
