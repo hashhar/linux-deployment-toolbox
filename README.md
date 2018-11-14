@@ -1,4 +1,6 @@
-# Linux Deployment Toolbox
+# Linux Deployment Toolbox (ARCHIVED)
+
+## Since I'm no longer using Ubuntu/Debian derivatives after moving to Arch, it's not feasible for me to maintain this anymore. Hence, this is being archived. If you find this useful, please fork it.
 
 A framework and policy built using `bash` (`sh` compatible) shell scripts that allows mass deployment of a system configuration to all machines within an organisation.
 
